@@ -19,7 +19,6 @@ function WorldClock({tenThanhPho, muiGio}) {
         return cityTime.toLocaleString()
     }
   
-tenThanhPho = 'Ha Noi'
 
     return (
         <div className='world-clock'>
