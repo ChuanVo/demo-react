@@ -10,6 +10,7 @@ import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 import VolumeDown from '@mui/icons-material/VolumeDown';
 import VolumeUp from '@mui/icons-material/VolumeUp';
+import ChuyenDoiTien from './components/chuyen-doi-tien';
 
 
 const arr = [
@@ -59,9 +60,8 @@ function App() {
         <VolumeUp />
       </Stack>
 
-      {/* <WorldClock tenThanhPho={'Da Nag'} muiGio={7}/>
-      <WorldClock tenThanhPho={'Hong Kong'} muiGio={8}/>
-      <WorldClock tenThanhPho={'Hong Kong'} muiGio={8}/> */}
+
+      <ChuyenDoiTien />
     </div>
   );
 }

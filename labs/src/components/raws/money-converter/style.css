@@ -1,0 +1,30 @@
+.money-converter-wrapper .wapper-info {
+    display: flex;
+  }
+  
+  .money-converter-wrapper .wapper-info .convert-item {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: end;
+  }
+  
+  .money-converter-wrapper .wapper-info .convert-item-label {
+    float: left;
+  }
+  
+  .money-converter-wrapper .wapper-info .selector {
+    float: left;
+  }
+  
+  .money-converter-wrapper .wrapper-convert-button {
+    padding: 10px;
+    float: right;
+  }
+  
+  .money-converter-wrapper .wrapper-convert-value {
+    padding: 10px;
+    float: left;
+  }
+  
