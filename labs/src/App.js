@@ -11,7 +11,7 @@ import Slider from '@mui/material/Slider';
 import VolumeDown from '@mui/icons-material/VolumeDown';
 import VolumeUp from '@mui/icons-material/VolumeUp';
 import ChuyenDoiTien from './components/chuyen-doi-tien';
-
+import RandomNumber from './components/random';
 
 const arr = [
   {
@@ -43,7 +43,7 @@ function App() {
 
       <TinhHieu /> */}
       
-      {arr.map(function(a, index) {
+      {/* {arr.map(function(a, index) {
     
         const {tenThanhPho, muiGio} = a
         console.log({tenThanhPho, muiGio})
@@ -61,7 +61,9 @@ function App() {
       </Stack>
 
 
-      <ChuyenDoiTien />
+      <ChuyenDoiTien /> */}
+
+      <RandomNumber />
     </div>
   );
 }
