@@ -7,6 +7,26 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Button from '@mui/material/Button';
 
+import styled from 'styled-components'
+
+const Wrapper = styled('div')`
+    margin-top: 10px;
+`
+
+const SoLuong = styled(TextField)``
+
+const FromSelector = styled(Select)`
+    margin: 0 20px;
+    width: 200px;
+`
+
+const ToSelector = styled(Select)`
+    margin-right: 20px;
+    width: 200px;
+`
+
+const KetQua = styled('p')``
+
 function ChuyenDoiTien() {
     const [from, setFrom] = useState()
     const [to, setTo] = useState()
@@ -32,10 +52,9 @@ function ChuyenDoiTien() {
       console.log({soLuong, from, to})
 
     return (
-        <div>
-            
-            <TextField id="outlined-basic" label="So luong" onChange={handleSoLuongChange}/>
-            <Select
+        <Wrapper>
+            <SoLuong id="outlined-basic" label="So luong" onChange={handleSoLuongChange}/>
+            <FromSelector
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={from}
@@ -45,8 +64,8 @@ function ChuyenDoiTien() {
                 <MenuItem value={1}>Viet Nam</MenuItem>
                 <MenuItem value={24}>USD</MenuItem>
                 <MenuItem value={25}>Euro</MenuItem>
-            </Select>
-            <Select
+            </FromSelector>
+            <ToSelector
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={to}
@@ -56,12 +75,12 @@ function ChuyenDoiTien() {
                 <MenuItem value={1}>Viet Nam</MenuItem>
                 <MenuItem value={24}>USD</MenuItem>
                 <MenuItem value={25}>Euro</MenuItem>
-            </Select>
+            </ToSelector>
 
             <Button variant="contained" onClick={handleQuyDoiClick}>Quy doi</Button>
 
-            <p>{ketQua}</p>
-        </div>
+            <KetQua>{ketQua}</KetQua>
+        </Wrapper>
     )
 }
 

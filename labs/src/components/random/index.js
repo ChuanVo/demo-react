@@ -1,8 +1,34 @@
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import "./style.css"
+// import './style.css'
+// import style from './style.module.css'
 
+import styled from 'styled-components'
+
+const WrapperRandomNumber = styled('div')``
+
+const WrapperFirstRow = styled('div')`
+    display: flex;
+    justify-content: space-between;
+`
+
+const RandomResult = styled('div')`
+    margin: 2rem;
+`
+
+const WrapperMinMax = styled('div')`
+    display: flex;
+    flex-direction: column;
+`
+
+const WrapperMin = styled(TextField)`
+`
+
+const RandomButton = styled(Button)`
+    width: 100%;
+    margin-top: 10px !important;
+`
 
 function RandomNumber() {
     const [min, setMin] = useState(0)
@@ -17,8 +43,8 @@ function RandomNumber() {
 
     const handleMaxChange = (event) => {
         console.log(event)
-        // const value = event.target.value
-        // setMax(Number(value))
+        const value = event.target.value
+        setMax(Number(value))
     } 
 
     function handleGenerateButtonClick() {
@@ -26,32 +52,27 @@ function RandomNumber() {
         setRandom(value)
     }
 
-
-
     return(
-        <div className='wrapper-random-number'>
-            <div className='wrapper-first-row'>
-                <div className='random-result'>
+        <WrapperRandomNumber>
+            <WrapperFirstRow>
+                <RandomResult>
                     {random}
-                </div>
-                <div className='wrapper-min-max'>
-                    <TextField 
-                        className='wrapper-min' 
+                </RandomResult>
+                <WrapperMinMax>
+                    <WrapperMin 
                         id="standard-basic" 
                         label="min" 
                         variant="standard" 
                         onChange={handleMinChange}/>
-                    <TextField 
-                        className='wrapper-max' 
+                    <WrapperMin 
                         id="standard-basic" 
                         label="max" 
                         variant="standard" 
                         onChange={handleMaxChange}/>
-                </div>
-            </div>
-            <Button className='random-button' variant="contained" onClick={handleGenerateButtonClick}>Generate</Button>
-
-        </div>
+                </WrapperMinMax>
+            </WrapperFirstRow>
+            <RandomButton variant="contained" onClick={handleGenerateButtonClick}>Generate</RandomButton>
+        </WrapperRandomNumber>
     )
 }
 export default RandomNumber;

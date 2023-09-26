@@ -12,6 +12,7 @@ import VolumeDown from '@mui/icons-material/VolumeDown';
 import VolumeUp from '@mui/icons-material/VolumeUp';
 import ChuyenDoiTien from './components/chuyen-doi-tien';
 import RandomNumber from './components/random';
+import Dashboard from './components/dashboard'
 
 const arr = [
   {
@@ -62,8 +63,9 @@ function App() {
 
 
       <ChuyenDoiTien /> */}
-
-      <RandomNumber />
+ <ChuyenDoiTien />
+      {/* <RandomNumber /> */}
+      {/* <Dashboard /> */}
     </div>
   );
 }
