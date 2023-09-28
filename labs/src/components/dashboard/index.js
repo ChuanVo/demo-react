@@ -81,19 +81,19 @@ const defaultTheme = createTheme();
 const mainListItems = (
     <React.Fragment>
         <ListItemButton>
-            <RouterLink to='/dashboard'>
+            <RouterLink to='/profile'>
                 <ListItemIcon>
                 <DashboardIcon />
                 </ListItemIcon>
-                <ListItemText primary="Dashboard" />
+                <ListItemText primary="profile" />
             </RouterLink> 
         </ListItemButton>
         <ListItemButton>
-            <RouterLink to='/profile'>
+            <RouterLink to='/chuyen-doi-tien'>
                 <ListItemIcon>
                     <PersonIcon />
                 </ListItemIcon>
-                <ListItemText primary="profile" />
+                <ListItemText primary="chuyen doi tien" />
             </RouterLink> 
         </ListItemButton>
     </React.Fragment>
@@ -180,8 +180,8 @@ export default function Dashboard() {
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             {'Nội dung được hiển thị tại đây!'}
             <Routes>
-                <Route path='dashboard' element={<div>dashboard</div>} />
-                <Route path='profile' element={<div>profile</div>} />
+                <Route path='profile' element={<div>dashboard</div>} />
+                <Route path='chuyen-doi-tien' element={<div>profile</div>} />
             </Routes>
           </Container>
         </Box>
