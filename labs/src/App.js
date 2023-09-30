@@ -125,6 +125,7 @@ function App() {
         <Route path='/chuyen-doi-tien' element={<ChuyenDoiTien />} />
         <Route path='/gallery' element={<Gallery dataImage={dataGallery}/>} />
         <Route path='/bmi' element={<BMICalculator />} />
+        <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
 
 

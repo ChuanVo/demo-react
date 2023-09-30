@@ -14,6 +14,23 @@ function BMICalculator() {
     setHeight(newValue)
   }
 
+  function handleThongBao(ketQua) {
+    if (ketQua < 18.5) {
+        return 'Ban qua gay di'
+    }
+    else if (ketQua >= 18.5 && ketQua < 24.9) {
+        return 'Ban co than hinh can doi'
+    }
+    else if (ketQua >= 25 && ketQua <= 29.9) {
+        return 'Ban da thua can roi'
+    }
+    else if (ketQua > 30) {
+        return 'Thua can roi, giam can di ne'
+    }
+  }
+
+  const ketQua = weight / (height * height / 10000)
+
 
   return (
     <div className='bmi-wrapper'>
@@ -36,7 +53,8 @@ function BMICalculator() {
             onChange={handleHeightChange}/>
         </div>
         <div className='bmi-item'>
-          <p className='bmi-item-title'>Kết quả: {weight / (height * height / 10000)}</p>
+          <p className='bmi-item-title'>Kết quả: {ketQua}</p>
+          <p className='bmi-item-title'>Thông báo: {handleThongBao(ketQua)}</p>
         </div>
       </div>
     </div>
