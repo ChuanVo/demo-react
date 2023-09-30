@@ -14,6 +14,7 @@ import ChuyenDoiTien from './components/chuyen-doi-tien';
 import RandomNumber from './components/random';
 import Dashboard from './components/dashboard'
 import Gallery from './components/gallery';
+import BMICalculator from './components/bmi';
 
 import styled from 'styled-components';
 
@@ -99,6 +100,9 @@ function App() {
   function handleGalleryClick() {
     navigate('/gallery')
   }
+  function handleBMIClick() {
+    navigate('/bmi')
+  }
 
   return (
     <div className="App">
@@ -112,6 +116,7 @@ function App() {
         <Button onClick={handleClockClick}>Clock</Button>
         <Button onClick={handleRandomClick}>RandomNumber</Button>
         <Button onClick={handleGalleryClick}>Gallery</Button>
+        <Button onClick={handleBMIClick}>BMI</Button>
       </WrapperMenu>
 
       <Routes>
@@ -119,6 +124,7 @@ function App() {
         <Route path='/random' element={<RandomNumber />} />
         <Route path='/chuyen-doi-tien' element={<ChuyenDoiTien />} />
         <Route path='/gallery' element={<Gallery dataImage={dataGallery}/>} />
+        <Route path='/bmi' element={<BMICalculator />} />
       </Routes>
 
 
