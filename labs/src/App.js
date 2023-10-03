@@ -15,14 +15,22 @@ import RandomNumber from './components/random';
 import Dashboard from './components/dashboard'
 import Gallery from './components/gallery';
 import BMICalculator from './components/bmi';
+import FuncClock from './components/clock-lifecycle';
+import VideoPlayer from './components/video-player';
 
 import styled from 'styled-components';
 
 import {Routes, Route, Link, useNavigate} from 'react-router-dom'
 
 const WrapperMenu = styled('div')`
-  border: 1px solid blue;
   margin-bottom: 20px;
+  display: flex;
+  background-color: #2E97A7;
+`
+
+const ButtonStyled = styled(Button)`
+  color: white !important;
+  margin: 0 10px !important;
 `
 
 const arr = [
@@ -103,20 +111,20 @@ function App() {
   function handleBMIClick() {
     navigate('/bmi')
   }
+  function handleVideoPlayerClick() {
+    navigate('/video-player')
+  }
 
   return (
     <div className="App">
+      {/* <FuncClock /> */}
       <WrapperMenu>
-        {/* <Link style={{margin: '10px'}} to={'/chuyen-doi-tien'}>Chuyen doi tien</Link>
-        <Link style={{margin: '10px'}} to={'/clock'}>Clock</Link>
-        <Link style={{margin: '10px'}} to={'/random-number'}>RandomNumber</Link>
-        <Link style={{margin: '10px'}} to={'/dashboard'}>Dashboard</Link> */}
-
-        <Button onClick={handleChuyenDoiTienClick}>Chuyen Doi Tien</Button>
-        <Button onClick={handleClockClick}>Clock</Button>
-        <Button onClick={handleRandomClick}>RandomNumber</Button>
-        <Button onClick={handleGalleryClick}>Gallery</Button>
-        <Button onClick={handleBMIClick}>BMI</Button>
+        <ButtonStyled onClick={handleChuyenDoiTienClick}>Chuyen Doi Tien</ButtonStyled>
+        <ButtonStyled onClick={handleClockClick}>Clock</ButtonStyled>
+        <ButtonStyled onClick={handleRandomClick}>RandomNumber</ButtonStyled>
+        <ButtonStyled onClick={handleGalleryClick}>Gallery</ButtonStyled>
+        <ButtonStyled onClick={handleBMIClick}>BMI</ButtonStyled>
+        <ButtonStyled onClick={handleVideoPlayerClick}>Video player</ButtonStyled>
       </WrapperMenu>
 
       <Routes>
@@ -126,6 +134,7 @@ function App() {
         <Route path='/gallery' element={<Gallery dataImage={dataGallery}/>} />
         <Route path='/bmi' element={<BMICalculator />} />
         <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/video-player' element={<VideoPlayer />} />
       </Routes>
 
 

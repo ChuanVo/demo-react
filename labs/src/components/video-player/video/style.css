@@ -1,0 +1,8 @@
+.video {
+    margin: 30px;
+    width: 500px;
+    max-width: 85%;
+    object-fit: 'contain';
+    overflow-clip-margin: 'content-box';
+    overflow: clip;
+}
